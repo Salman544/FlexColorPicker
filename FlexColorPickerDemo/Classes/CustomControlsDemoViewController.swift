@@ -29,6 +29,7 @@
 import FlexColorPicker
 
 class CustomControlsDemoViewController: CustomColorPickerViewController {
+    @IBOutlet weak var customColorPicker: RadialHueControl!
     @IBOutlet weak var hueSlider: HueUISliderColorControl! {
         didSet {
             colorPicker.controlDidSet(newValue: hueSlider, oldValue: oldValue)

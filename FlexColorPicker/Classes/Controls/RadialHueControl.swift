@@ -30,8 +30,15 @@ import UIKit
 
 let radialHuePaletteStripWidth: CGFloat = 28
 
+protocol RadialHueControlDelegate: NSObject {
+    func onColorChanged(_ color: UIColor)
+}
+
 @IBDesignable
 class RadialHueControl: ColorPaletteControl {
+    
+    weak var delegate: RadialHueControlDelegate? = nil
+    
     public override func commonInit() {
         paletteDelegate = RadialHueColorPaletteDelegate()
         thumbView.autoDarken = false
@@ -46,5 +53,6 @@ class RadialHueControl: ColorPaletteControl {
     override func setSelectedHSBColor(_ hsbColor: HSBColor, isInteractive interactive: Bool) {
         super.setSelectedHSBColor(hsbColor, isInteractive: interactive)
         thumbView.setColor(selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor(), animateBorderColor: false)
+        delegate?.onColorChanged(selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor())
     }
 }

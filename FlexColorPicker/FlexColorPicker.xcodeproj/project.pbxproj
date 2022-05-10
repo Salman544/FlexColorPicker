@@ -43,7 +43,7 @@
 		30B45CC720C9769F000CF044 /* PaletteAwareScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B45CC620C9769F000CF044 /* PaletteAwareScrollView.swift */; };
 		30EF527420BD431900E9E247 /* HSBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF527320BD431900E9E247 /* HSBColor.swift */; };
 		70B31CBA282A75D6006A62E5 /* RadialHueColorPaletteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B31CB8282A75D6006A62E5 /* RadialHueColorPaletteDelegate.swift */; };
-		70B31CBB282A75D6006A62E5 /* RadialHuePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B31CB9282A75D6006A62E5 /* RadialHuePalette.swift */; };
+		70B31CBB282A75D6006A62E5 /* RadialHueControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B31CB9282A75D6006A62E5 /* RadialHueControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +85,7 @@
 		30B45CC620C9769F000CF044 /* PaletteAwareScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteAwareScrollView.swift; sourceTree = "<group>"; };
 		30EF527320BD431900E9E247 /* HSBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBColor.swift; sourceTree = "<group>"; };
 		70B31CB8282A75D6006A62E5 /* RadialHueColorPaletteDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialHueColorPaletteDelegate.swift; sourceTree = "<group>"; };
-		70B31CB9282A75D6006A62E5 /* RadialHuePalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialHuePalette.swift; sourceTree = "<group>"; };
+		70B31CB9282A75D6006A62E5 /* RadialHueControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialHueControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 				3021F6E120C8A7EB004E5D5A /* PaletteControls.swift */,
 				300A24E220C30E8100BA8874 /* ComponentSliderControls.swift */,
 				70B31CB8282A75D6006A62E5 /* RadialHueColorPaletteDelegate.swift */,
-				70B31CB9282A75D6006A62E5 /* RadialHuePalette.swift */,
+				70B31CB9282A75D6006A62E5 /* RadialHueControl.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 				305A235420BB1A8200271A59 /* UIColorExtension.swift in Sources */,
 				3034757120BC7EE500028A15 /* ColorControl.swift in Sources */,
 				30184F2420C9D06E00A81D6A /* DefaultColorPickerViewController.swift in Sources */,
-				70B31CBB282A75D6006A62E5 /* RadialHuePalette.swift in Sources */,
+				70B31CBB282A75D6006A62E5 /* RadialHueControl.swift in Sources */,
 				3021F6DE20C82845004E5D5A /* AdjustedHitBoxColorControl.swift in Sources */,
 				30184F2620C9D95F00A81D6A /* ColorPickerControllerProtocol.swift in Sources */,
 				306F04A420C2F6F900ABEB71 /* RectangularHSBPaletteDelegate.swift in Sources */,
