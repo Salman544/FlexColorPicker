@@ -17,8 +17,6 @@
 		305A239920BBFDC100271A59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305A239820BBFDC100271A59 /* Main.storyboard */; };
 		3094B99120CB46AE00B6D0A0 /* CustomControlsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094B99020CB46AE00B6D0A0 /* CustomControlsDemoViewController.swift */; };
 		30B950CF20C8B3A9004E207C /* DemoRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B950CE20C8B3A9004E207C /* DemoRootViewController.swift */; };
-		30FE28E020CB11D700D0063E /* RadialHuePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE28DF20CB11D700D0063E /* RadialHuePalette.swift */; };
-		30FE28E220CB1AAA00D0063E /* RadialHueColorPaletteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE28E120CB1AAA00D0063E /* RadialHueColorPaletteDelegate.swift */; };
 		BD03C92816B11F0F02371D16 /* Pods_FlexColorPickerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AEB6B6E448DB6987DCDD78 /* Pods_FlexColorPickerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +34,6 @@
 		305A239820BBFDC100271A59 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3094B99020CB46AE00B6D0A0 /* CustomControlsDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlsDemoViewController.swift; sourceTree = "<group>"; };
 		30B950CE20C8B3A9004E207C /* DemoRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRootViewController.swift; sourceTree = "<group>"; };
-		30FE28DF20CB11D700D0063E /* RadialHuePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialHuePalette.swift; sourceTree = "<group>"; };
-		30FE28E120CB1AAA00D0063E /* RadialHueColorPaletteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialHueColorPaletteDelegate.swift; sourceTree = "<group>"; };
 		C9FA8BCD0B37E6DADE683D48 /* Pods-FlexColorPickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexColorPickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexColorPickerDemo/Pods-FlexColorPickerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D5911E4D803C6CD9312A74D8 /* Pods-FlexColorPickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexColorPickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexColorPickerDemo/Pods-FlexColorPickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +88,6 @@
 		30FE28DE20CB0F3800D0063E /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
-				30FE28DF20CB11D700D0063E /* RadialHuePalette.swift */,
-				30FE28E120CB1AAA00D0063E /* RadialHueColorPaletteDelegate.swift */,
 				304583DF20CB3C2E00CDD791 /* UISliderColorControl.swift */,
 				304583E120CB3F7000CDD791 /* HueColorSliderDelegate.swift */,
 			);
@@ -235,11 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FE28E220CB1AAA00D0063E /* RadialHueColorPaletteDelegate.swift in Sources */,
 				3094B99120CB46AE00B6D0A0 /* CustomControlsDemoViewController.swift in Sources */,
 				30B950CF20C8B3A9004E207C /* DemoRootViewController.swift in Sources */,
 				30184F2820C9E02400A81D6A /* PickerInTableDemoViewController.swift in Sources */,
-				30FE28E020CB11D700D0063E /* RadialHuePalette.swift in Sources */,
 				3021F6D820C59EFD004E5D5A /* ModalDemoViewController.swift in Sources */,
 				305A236A20BB4F7700271A59 /* AppDelegate.swift in Sources */,
 				304583E220CB3F7000CDD791 /* HueColorSliderDelegate.swift in Sources */,
