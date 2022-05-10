@@ -3,8 +3,8 @@
 //  FlexColorPickerDemo
 //
 //  Created by Rastislav Mirek on 8/6/18.
-//  
-//	MIT License
+//
+//    MIT License
 //  Copyright (c) 2018 Rastislav Mirek
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,8 +28,6 @@
 
 import UIKit
 
-let radialHuePaletteStripWidth: CGFloat = 28
-
 public protocol RadialHueControlDelegate: NSObject {
     func onColorChanged(_ color: UIColor)
 }
@@ -37,22 +35,46 @@ public protocol RadialHueControlDelegate: NSObject {
 @IBDesignable
 public class RadialHueControl: ColorPaletteControl {
     
-    weak var delegate: RadialHueControlDelegate? = nil
+    public weak var delegate: RadialHueControlDelegate? = nil
+    private var timer: Timer? = nil
+    
+    @IBInspectable
+    var stripWidth: CGFloat = 13
     
     public override func commonInit() {
-        paletteDelegate = RadialHueColorPaletteDelegate()
+        paletteDelegate = RadialHueColorPaletteDelegate(radialHuePaletteStripWidth: stripWidth)
         thumbView.autoDarken = false
         super.commonInit()
     }
 
-    override func updatePaletteImagesAndThumb(isInteractive interactive: Bool) {
+    public override func updatePaletteImagesAndThumb(isInteractive interactive: Bool) {
         super.updatePaletteImagesAndThumb(isInteractive: interactive)
-        thumbView.setColor(selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor(), animateBorderColor: false)
+        thumbView.setColor(.white, animateBorderColor: false)
+        updateThumb(with: selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor())
     }
 
-    override func setSelectedHSBColor(_ hsbColor: HSBColor, isInteractive interactive: Bool) {
+    public override func setSelectedHSBColor(_ hsbColor: HSBColor, isInteractive interactive: Bool) {
         super.setSelectedHSBColor(hsbColor, isInteractive: interactive)
-        thumbView.setColor(selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor(), animateBorderColor: false)
-        delegate?.onColorChanged(selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor())
+        let color = selectedHSBColor.withSaturation(1, andBrightness: 1).toUIColor()
+        updateThumb(with: color)
+        if #available(iOS 10.0, *) {
+            
+            if timer != nil {
+                timer?.invalidate()
+                timer = nil
+            }
+            
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
+                self?.delegate?.onColorChanged(color)
+            })
+            
+        } else {
+            // support for iOS 10+
+        }
+    }
+    
+    private func updateThumb(with color: UIColor) {
+        thumbView.borderView.backgroundColor = color.withAlphaComponent(0.5)
+        thumbView.borderView.viewBorderColor = color.withAlphaComponent(0.5)
     }
 }

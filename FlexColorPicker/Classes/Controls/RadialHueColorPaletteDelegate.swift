@@ -3,8 +3,8 @@
 //  FlexColorPickerDemo
 //
 //  Created by Rastislav Mirek on 8/6/18.
-//  
-//	MIT License
+//
+//    MIT License
 //  Copyright (c) 2018 Rastislav Mirek
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,11 @@ class RadialHueColorPaletteDelegate: ColorPaletteDelegate {
     private(set) var midX: CGFloat = 0
     private(set) var midY: CGFloat = 0
     private(set) var ceiledDiameter: Int = 0
+    private var radialHuePaletteStripWidth: CGFloat = 15
+    
+    init(radialHuePaletteStripWidth: CGFloat) {
+        self.radialHuePaletteStripWidth = radialHuePaletteStripWidth
+    }
 
     var size: CGSize = .zero {
         didSet {
