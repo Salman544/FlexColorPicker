@@ -30,12 +30,12 @@ import UIKit
 
 let radialHuePaletteStripWidth: CGFloat = 28
 
-protocol RadialHueControlDelegate: NSObject {
+public protocol RadialHueControlDelegate: NSObject {
     func onColorChanged(_ color: UIColor)
 }
 
 @IBDesignable
-class RadialHueControl: ColorPaletteControl {
+public class RadialHueControl: ColorPaletteControl {
     
     weak var delegate: RadialHueControlDelegate? = nil
     
